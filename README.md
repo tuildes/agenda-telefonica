@@ -28,8 +28,8 @@ make clean;
 
 ## Infos
 
-**Tecnologias**: `C`
-**Data**: 12/10/2023
+* **Tecnologias**: `C`
+* **Data**: 12/10/2023
 
 ---
 
