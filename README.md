@@ -30,7 +30,7 @@ make
 ### Debug
 ```bash
 # Verifica vazamentos de memoria
-valgrind --leak-check=full --track-origins=yes -s ./theboys
+valgrind --leak-check=full --track-origins=yes -s ./programa
 ```
 
 ### Limpeza
