@@ -1,36 +1,51 @@
-# Agenda Telefônica [C]
+# 👻 Agenda telefônica
 
-## Descrição
+> [!NOTE]
+> O projeto é um programa feito em `C` de uma **agenda telefônica**, contando com `read`, `create` e `delete`  da **lista local**. Funcionando somente enquanto o programa estiver rodando, _não salvando nada em arquivos_, mas podendo ser facilmente implementado desta forma. O trabalho foi feito para a matéria de programação I na faculdade [^1]
 
-> "_Agenda telefônica feita em C_"
+**Ela possui 4 "estados":**
 
-Ela possui 4 "estados":
+1. Visualizar Lista **(read)**
+2. Inserir um telefone **(create)**
+3. Remover um telefone **(delete)**
+4. `Sair`
 
-1. Visualizar Lista
-2. Inserir um telefone
-3. Remover um telefone
-4. Sair
+## ☕ Info
 
-**Obsevação**: Ela não guarda informações em arquivos, apenas temporárias durante a execução do programa :)
+- **Matéria**: Programação I [^1]
+- **Linguagem**: `C`
+- **Data**: 12/10/2023
 
-## Rodando a aplicação
+## 🐛 Comandos
 
+### Setup
 ```bash
-# Compilar programa:
-make;
+# Compilar o programa em um arquivo ./programa
+make
 
-# Rodar programa:
-./programa;
-
-# Remover arquivos do makefile:
-make clean;
+# Rodar o programa
+./programa
 ```
 
-## Infos
+### Debug
+```bash
+# Verifica vazamentos de memoria
+valgrind --leak-check=full --track-origins=yes -s ./theboys
+```
 
-* **Tecnologias**: `C`
-* **Data**: 12/10/2023
+### Limpeza
+```bash
+# Remove arquivos .o e executaveis
+make clean
+```
 
----
+## 🚀 Arquivos
 
-![dads](banner.png)
+    .
+    ├── biblioteca                   # Todas as funções do programa e defines
+    ├── programa                     # Contém o MAIN() e o loop de estados
+    ├── makefile                     # Arquivo MAKE para compilação
+    |
+    └── README.md                   
+
+[^1]: Faculdade de **Informática Biomédica** na Universidade Federal do Paraná no ano de 2023 (segundo semestre), o curso se consiste em uma matriz de ciência da computação com matérias focadas as áreas biomédicas e aplicações da computação em áreas médicas, como genética.
